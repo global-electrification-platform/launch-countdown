@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="No description yet." />
+
+    <title>Global Electrification Platform Explorer</title>
+    <meta name="description" content="A tool to explore least cost electrification strategies around the world." />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@WorldBank" />
+    <meta name="twitter:title" content="Global Electrification Platform Explorer" />
+    <meta name="twitter:image:src" content="https://electrifynow.energydata.info/assets/graphics/meta/default-meta-image.png" />
+    <meta name="twitter:description" content="A tool to explore least cost electrification strategies around the world." />
+
+    <!-- OG -->
+    <meta property="og:site_name" content="Global Electrification Platform Explorer" />
+    <meta property="og:url" content="https://electrifynow.energydata.info" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Global Electrification Platform Explorer" />
+    <meta property="og:image" content="https://electrifynow.energydata.info/assets/graphics/meta/default-meta-image.png" />
+    <meta property="og:description" content="A tool to explore least cost electrification strategies around the world." />
+
+
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/graphics/meta/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/graphics/meta/android-chrome.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/meta/apple-touch-icon.png" />
+
+    <link rel="author" type="text/plain" href="humans.txt" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,300i,500,500i" />
+    
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+ 
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #383da3;
+        font-size: 1rem;
+        line-height: 1.5;
+        font-style: normal;
+      }
+
+      #page {
+        color: #fff;
+        font-family: "Rubik",sans-serif;
+        font-weight: 500;
+
+        align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        min-width: 300px;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      #page > * {
+        margin: 0;
+      }
+
+      #countdown {
+        color: #ffc700;
+        font-size: 6rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+
+      #coming-soon {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+
+      #countdown #days {
+        display: block;
+      }
+
+    </style>
+    <script>
+      const countDownDate = new Date("Sep 24, 2019 00:00:00").getTime()
+      
+      // Add leading zero to a single digit
+      function leadingZero(number) {
+        return number < 10 ? `0${number}` : number
+      }
+
+      function setTime() {
+        const now = new Date().getTime()
+        const delta = countDownDate - now
+      
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(delta / (1000 * 60 * 60 * 24))
+        const hours = leadingZero(Math.floor((delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
+        const minutes = leadingZero(Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60)))
+        const seconds = leadingZero(Math.floor((delta % (1000 * 60)) / 1000))
+      
+        document.getElementById("days").innerHTML = `${days} days`
+        document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}`
+      }
+
+      // Update the count down every 1 second
+      var x = setInterval(function() { setTime() }, 1000);
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <p id="countdown">
+        <span id="days">...</span>
+        <span id="time"></span>
+      </p>
+      <p id="coming-soon">until the launch of the Global Electrification Platform</p>
+    </div>
+  </body>
+</html>
