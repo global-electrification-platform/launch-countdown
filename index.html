@@ -105,6 +105,7 @@
       
         document.getElementById("days").innerHTML = `${days} days`
         document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}`
+        document.getElementById("coming-soon").innerHTML = `until the launch of the Global Electrification Platform`
       }
 
       // Update the count down every 1 second
@@ -114,10 +115,10 @@
   <body>
     <div id="page">
       <p id="countdown">
-        <span id="days">...</span>
+        <span id="days"></span>
         <span id="time"></span>
       </p>
-      <p id="coming-soon">until the launch of the Global Electrification Platform</p>
+      <p id="coming-soon">Loading...</p>
     </div>
   </body>
 </html>
